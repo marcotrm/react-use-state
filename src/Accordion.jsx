@@ -9,9 +9,17 @@ export default function Accordion({ title, description }) {
 
   return (
     <div className="accordion-item">
-      <div className="accordion">
+      <div
+        className="accordion"
+        style={{ backgroundColor: isOpen ? "yellow" : "white" }}
+      >
         <h1>{title}</h1>
-        <button onClick={toggleAccordion}>{isOpen ? "-" : "+"}</button>
+        <button
+          style={{ backgroundColor: isOpen ? "yellow" : "white" }}
+          onClick={toggleAccordion}
+        >
+          {isOpen ? "-" : "+"}
+        </button>
       </div>
       <div className="accordion-description">
         {isOpen && <p>{description}</p>}
