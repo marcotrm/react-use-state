@@ -5,7 +5,13 @@ export default function Accordionlist() {
   return (
     <div className="container">
       {languages.map((lang) => {
-        <Accordion key={lang.id} title={lang.title} content={lang.content} />;
+        return (
+          <Accordion
+            key={lang.id}
+            title={lang.title}
+            description={lang.description}
+          />
+        );
       })}
     </div>
   );
