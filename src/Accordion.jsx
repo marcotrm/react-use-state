@@ -1,21 +1,13 @@
-import languages from "./assets/Languages";
-
-export default function Accordion() {
+export default function Accordion(title, description) {
   return (
-    <div className="container">
-      {languages.map((lang) => {
-        return (
-          <div key={lang.id} className="accordion-item">
-            <div className="accordion">
-              <h1>{lang.title}</h1>
-              <button>+</button>
-            </div>
-            <div className="accordion-description">
-              <p>{lang.description}</p>
-            </div>
-          </div>
-        );
-      })}
+    <div className="accordion-item">
+      <div className="accordion">
+        <h1>{title}</h1>
+        <button>+</button>
+      </div>
+      <div className="accordion-description">
+        <p>{description}</p>
+      </div>
     </div>
   );
 }
